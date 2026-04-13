@@ -1,0 +1,914 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PhenomWordmark from '../../branding/PhenomWordmark.svg?raw';
+import SeinARTSWordmark from '../../branding/SeinARTSWordmark.svg?raw';
+---
+
+<Layout title="Phenom Studios" description="Phenom Studios — building RTS games and Unreal Engine tools built for competitive play.">
+  <!-- ── Navigation ───────────────────────────────────────────── -->
+  <header class="nav-wrap">
+    <nav class="nav container">
+      <a href="#" class="nav__brand" aria-label="Phenom Studios home">
+        <Fragment set:html={PhenomWordmark} />
+      </a>
+      <button class="nav__burger" aria-label="Toggle menu" aria-expanded="false">
+        <svg class="icon--menu" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <svg class="icon--close" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <ul class="nav__links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="mailto:hello@phenomstudios.dev" class="nav__cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ── Hero ─────────────────────────────────────────────────── -->
+    <section class="hero">
+      <canvas class="hero__canvas" aria-hidden="true"></canvas>
+      <div class="hero__content container">
+        <div class="hero__logo">
+          <Fragment set:html={PhenomWordmark} />
+        </div>
+        <p class="hero__tagline">Real-time Strategy Experts</p>
+        <a href="#intro" class="hero__scroll" aria-label="Scroll to work">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 5v14"/><path d="M6 13l6 6 6-6"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ── Intro ────────────────────────────────────────────────── -->
+    <section id="intro" class="intro container">
+      <div class="intro__eyebrow">RTS Games &amp; Unreal Engine Software</div>
+      <h1 class="intro__headline">
+        We build <span class="intro__headline--bold">RTS</span> games &amp; software<br />
+        <span class="intro__headline--plain">in</span>
+        <span class="intro__headline--accent">Unreal Engine.</span>
+      </h1>
+      <p class="intro__sub">
+        Phenom Studios makes competitive real-time strategy games and the
+        low-level Unreal Engine tooling to power them — including SeinARTS,
+        a deterministic lockstep simulation framework built for RTS.
+      </p>
+      <div class="intro__actions">
+        <a href="#work" class="btn btn--primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <g transform="translate(0 -0.9) scale(1 1.06)">
+              <path d="M6.6 7.9h10.8c2.7 0 4.9 2.2 4.9 4.9 0 .7-.15 1.4-.45 2.06l-.72 1.62a2.45 2.45 0 0 1-3.97.78l-1.88-1.7H8.65l-1.88 1.7a2.45 2.45 0 0 1-3.97-.78l-.72-1.62A4.9 4.9 0 0 1 6.6 7.9z"/>
+              <path d="M7.9 12.3h3.2"/>
+              <path d="M9.5 10.7v3.2"/>
+              <circle cx="15.85" cy="11.65" r="0.9"/>
+              <circle cx="18.05" cy="13.25" r="0.9"/>
+              <circle cx="11.15" cy="9.35" r="0.45"/>
+              <circle cx="12.85" cy="9.35" r="0.45"/>
+            </g>
+          </svg>
+          Work
+        </a>
+        <a href="mailto:hello@phenomstudios.dev" class="btn btn--ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="14" rx="1"/>
+            <path d="M3 7l9 6 9-6"/>
+          </svg>
+          Contact
+        </a>
+      </div>
+    </section>
+
+    <!-- ── Work / Projects ──────────────────────────────────────── -->
+    <section id="work" class="work container">
+      <h2 class="section-label">Featured Work</h2>
+
+      <div class="cards">
+        <!-- SeinARTS card -->
+        <a href="https://seinarts.gg" target="_blank" rel="noopener noreferrer" class="card card--featured">
+          <div class="card__media">
+            <Fragment set:html={SeinARTSWordmark} />
+          </div>
+          <div class="card__body">
+            <p class="card__desc">
+              Deterministic lockstep simulation for Unreal Engine, built to power
+              fast, competitive RTS multiplayer.
+            </p>
+            <span class="card__link">
+              seinarts.gg
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 17L17 7"/><path d="M7 7h10v10"/>
+              </svg>
+            </span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ── About ────────────────────────────────────────────────── -->
+    <section id="about" class="about container">
+      <div class="about__grid">
+        <div class="about__text">
+          <h2 class="section-label">About</h2>
+          <p>
+            Phenom Studios is an independent game studio building real-time
+            strategy games that reward skill, decision-making, and tactical
+            creativity. We care about the genre — and about making games that
+            feel ruthlessly good to play.
+          </p>
+        </div>
+        <ul class="about__pillars">
+          <li class="pillar">
+            <span class="pillar__icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="10" cy="10" r="2" fill="var(--color-red)"/>
+                <circle cx="10" cy="10" r="6" stroke="var(--color-red)" stroke-width="1.5" fill="none"/>
+                <line x1="10" y1="1" x2="10" y2="5" stroke="var(--color-red)" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="10" y1="15" x2="10" y2="19" stroke="var(--color-red)" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="1" y1="10" x2="5" y2="10" stroke="var(--color-red)" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="15" y1="10" x2="19" y2="10" stroke="var(--color-red)" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <strong>RTS-first</strong>
+            <span>Strategy games are our obsession — every design choice serves competitive, high-stakes play.</span>
+          </li>
+          <li class="pillar">
+            <span class="pillar__icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M1 10 C4 5, 7 3, 10 3 C13 3, 16 5, 19 10 C16 15, 13 17, 10 17 C7 17, 4 15, 1 10 Z" stroke="var(--color-blue)" stroke-width="1.5" fill="none"/>
+                <circle cx="10" cy="10" r="2.5" fill="var(--color-blue)"/>
+              </svg>
+            </span>
+            <strong>Immersive</strong>
+            <span>Worlds worth getting lost in. We build atmosphere, lore, and moment-to-moment feel — not just systems.</span>
+          </li>
+          <li class="pillar">
+            <span class="pillar__icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="10" cy="10" r="8" stroke="var(--color-red)" stroke-width="1.5" fill="none"/>
+                <path d="M2 10 Q6 6 10 10 Q14 14 18 10" stroke="var(--color-red)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                <line x1="10" y1="2" x2="10" y2="18" stroke="var(--color-red)" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <strong>Open</strong>
+            <span>The tools we build go back to the community. Our engine is open-source so modders and developers can shape the game too.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── Footer ───────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">      <ul class="footer__links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="mailto:hello@phenomstudios.dev">Contact</a></li>
+      </ul>      <div class="footer__inner">
+        <a href="/" class="footer__brand" aria-label="Phenom Studios home">
+          <Fragment set:html={PhenomWordmark} />
+        </a>
+        <span class="footer__copy">&copy; {new Date().getFullYear()}</span>
+      </div>
+    </div>
+  </footer>
+</Layout>
+
+<script>
+  const navWrap = document.querySelector<HTMLElement>('.nav-wrap');
+  const burger = document.querySelector<HTMLButtonElement>('.nav__burger');
+  const navLinks = document.querySelectorAll<HTMLAnchorElement>('.nav__links a');
+  const THRESHOLD = 250;
+
+  function updateNav() {
+    if (!navWrap) return;
+    if (window.scrollY >= THRESHOLD) {
+      navWrap.classList.add('is-visible');
+    } else {
+      navWrap.classList.remove('is-visible');
+      closeMenu();
+    }
+  }
+
+  function closeMenu() {
+    navWrap?.classList.remove('menu-open');
+    burger?.setAttribute('aria-expanded', 'false');
+  }
+
+  burger?.addEventListener('click', () => {
+    const isOpen = navWrap?.classList.toggle('menu-open');
+    burger.setAttribute('aria-expanded', String(isOpen ?? false));
+  });
+
+  navLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+  window.addEventListener('scroll', updateNav, { passive: true });
+  updateNav();
+
+  // ── Hero canvas particle network ──────────────────────────────
+  const heroCanvas = document.querySelector<HTMLCanvasElement>('.hero__canvas');
+  const heroCtx = heroCanvas?.getContext('2d');
+
+  if (heroCanvas && heroCtx) {
+    const COLORS: [number, number, number][] = [
+      [227, 30, 36],
+      [227, 30, 36],
+      [30, 143, 225],
+      [30, 143, 225],
+      [190, 190, 205],
+    ];
+
+    const N = 65;
+    const MAX_DIST = 145;
+    let W = 0, H = 0;
+
+    type Particle = {
+      x: number; y: number;
+      vx: number; vy: number;
+      r: number;
+      rgb: [number, number, number];
+    };
+
+    let pts: Particle[] = [];
+
+    function resizeCanvas() {
+      W = heroCanvas.offsetWidth;
+      H = heroCanvas.offsetHeight;
+      heroCanvas.width = W;
+      heroCanvas.height = H;
+    }
+
+    function initParticles() {
+      pts = [];
+      for (let i = 0; i < N; i++) {
+        const speed = 0.25 + Math.random() * 0.45;
+        const angle = Math.random() * Math.PI * 2;
+        pts.push({
+          x: Math.random() * W,
+          y: Math.random() * H,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed,
+          r: 0.6 + Math.random() * 1.8,
+          rgb: COLORS[Math.floor(Math.random() * COLORS.length)],
+        });
+      }
+    }
+
+    function drawFrame() {
+      heroCtx.clearRect(0, 0, W, H);
+
+      for (const p of pts) {
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < -4) p.x = W + 4;
+        else if (p.x > W + 4) p.x = -4;
+        if (p.y < -4) p.y = H + 4;
+        else if (p.y > H + 4) p.y = -4;
+      }
+
+      for (let i = 0; i < N; i++) {
+        for (let j = i + 1; j < N; j++) {
+          const dx = pts[i].x - pts[j].x;
+          const dy = pts[i].y - pts[j].y;
+          const d = Math.sqrt(dx * dx + dy * dy);
+          if (d < MAX_DIST) {
+            const alpha = ((1 - d / MAX_DIST) * 0.28).toFixed(3);
+            const [r, g, b] = pts[i].rgb;
+            heroCtx.strokeStyle = `rgba(${r},${g},${b},${alpha})`;
+            heroCtx.lineWidth = 0.6;
+            heroCtx.beginPath();
+            heroCtx.moveTo(pts[i].x, pts[i].y);
+            heroCtx.lineTo(pts[j].x, pts[j].y);
+            heroCtx.stroke();
+          }
+        }
+      }
+
+      for (const p of pts) {
+        const [r, g, b] = p.rgb;
+        heroCtx.fillStyle = `rgba(${r},${g},${b},0.85)`;
+        heroCtx.beginPath();
+        heroCtx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        heroCtx.fill();
+      }
+
+      requestAnimationFrame(drawFrame);
+    }
+
+    const ro = new ResizeObserver(() => { resizeCanvas(); initParticles(); });
+    ro.observe(heroCanvas);
+    resizeCanvas();
+    initParticles();
+    drawFrame();
+  }
+</script>
+
+<style>
+/* ── Layout helpers ─────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 5vw, 3rem);
+}
+
+/* ── Nav ─────────────────────────────────────────────────────── */
+.nav-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--color-border);
+  background: rgba(0 0 0 / 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+.nav-wrap.is-visible {
+  transform: translateY(0);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1rem;
+}
+
+.nav__brand :global(svg) {
+  display: block;
+  height: 40px;
+  width: auto;
+  margin-block: 0px
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.nav__links a {
+  padding: 0.45rem 1.1rem;
+  border: 1px solid transparent;
+  color: var(--color-muted);
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.nav__links a:hover {
+  color: var(--color-text);
+}
+
+.nav__links a:not(.nav__cta):hover {
+  border-color: var(--color-blue);
+  background: rgba(30 143 225 / 0.08);
+}
+
+.nav__links a.nav__cta {
+  padding: 0.45rem 1.1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  color: var(--color-text) !important;
+  transition: border-color 0.2s, background 0.2s !important;
+}
+
+.nav__links a.nav__cta:hover {
+  border-color: var(--color-red) !important;
+  background: rgba(227 30 36 / 0.08) !important;
+}
+
+/* ── Burger button ──────────────────────────────────────────── */
+.nav__burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  color: var(--color-text);
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.nav__burger .icon--close {
+  display: none;
+}
+
+.menu-open .nav__burger .icon--close {
+  display: block;
+}
+
+.menu-open .nav__burger .icon--menu {
+  display: none;
+}
+
+/* ── Hero (logo only) ──────────────────────────────────────── */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  padding-block: clamp(4rem, 10vw, 8rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(160px);
+  pointer-events: none;
+}
+
+.hero::before {
+  width: 55vw;
+  height: 55vw;
+  background: var(--color-red);
+  opacity: 0.05;
+  top: -15%;
+  left: -10%;
+  animation: orbA 8s ease-in-out infinite alternate;
+}
+
+.hero::after {
+  width: 45vw;
+  height: 45vw;
+  background: var(--color-blue);
+  opacity: 0.04;
+  bottom: -15%;
+  right: -8%;
+  animation: orbB 10s ease-in-out infinite alternate;
+}
+
+@keyframes orbA {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(6%, 10%) scale(1.12); }
+}
+
+@keyframes orbB {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(-8%, -6%) scale(1.08); }
+}
+
+.hero__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero__logo :global(svg) {
+  width: clamp(315px, 65%, 680px);
+  height: auto;
+  display: block;
+  margin-inline: auto;
+  transform: translateX(-4%);
+}
+
+.hero__tagline {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+/* ── Hero scroll button ─────────────────────────────────────── */
+.hero__scroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid rgba(255 255 255 / 0.15);
+  background: transparent;
+  color: var(--color-red);
+  transition: background 0.2s, border-color 0.2s;
+  animation: arrowColor 3s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+.hero__scroll:hover {
+  background: rgba(255 255 255 / 0.08);
+  border-color: rgba(255 255 255 / 0.28);
+}
+
+@keyframes arrowColor {
+  0%   { color: var(--color-red); }
+  50%  { color: var(--color-blue); }
+  100% { color: var(--color-red); }
+}
+
+/* ── Intro ─────────────────────────────────────────────────── */
+.intro {
+  scroll-margin-top: 2.5rem;
+  padding-top: calc(clamp(4rem, 10vw, 8rem) * 0.9);
+  padding-bottom: clamp(4rem, 10vw, 8rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 820px;
+  border-top: 1px solid var(--color-border);
+}
+
+.intro__eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-blue);
+}
+
+.intro__headline {
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.intro__headline--mid {
+  font-weight: 500;
+}
+
+.intro__headline--bold {
+  font-weight: 700;
+}
+
+.intro__headline--accent {
+  display: inline-block;
+  font-weight: 500;
+  background: linear-gradient(90deg, var(--color-red), var(--color-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.intro__headline--plain {
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.intro__sub {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--color-muted);
+  max-width: 540px;
+  line-height: 1.7;
+}
+
+.intro__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+/* ── Buttons ──────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: opacity 0.2s, transform 0.15s;
+  cursor: pointer;
+}
+
+.btn svg {
+  width: 20px !important;
+  height: 20px !important;
+  flex-shrink: 0;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn--primary {
+  border: 1px solid var(--color-red);
+  background: transparent;
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: rgba(227 30 36 / 0.12);
+}
+
+.btn--ghost {
+  border: 1px solid var(--color-blue);
+  background: transparent;
+  color: #fff;
+}
+
+.btn--ghost:hover {
+  background: rgba(30 143 225 / 0.12);
+}
+
+/* ── Section label ────────────────────────────────────────── */
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 2rem;
+}
+
+/* ── Work ────────────────────────────────────────────────── */
+.work {
+  padding-top: calc(clamp(4rem, 8vw, 7rem) * 0.9);
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+  border-top: 1px solid var(--color-border);
+}
+
+.cards {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 480px), 1fr));
+}
+
+/* ── Card ────────────────────────────────────────────────── */
+.card {
+  display: flex;
+  justify-content: flex-start;
+  width: fit-content;
+  max-width: 100%;
+  padding: 0;
+  background: var(--color-card);
+  border: 1px solid transparent;
+  border-radius: calc(var(--radius) * 1.5);
+  transition: transform 0.2s, background 0.2s;
+  align-items: center;
+}
+
+.card:hover {
+  transform: none;
+  background: linear-gradient(rgba(255 0 0 / 0.05), rgba(255 0 0 / 0.01)), var(--color-card);
+  border-color: var(--color-red);
+}
+
+.card__media {
+  flex: 0 0 192px;
+  width: 192px;
+  height: 192px;
+  background: #0d0f1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.card__media :global(svg) {
+  width: 152px;
+  height: auto;
+  transform: translateY(-6px);
+}
+
+.card__body {
+  flex: 0 0 260px;
+  width: 260px;
+  max-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 1rem 1.15rem;
+}
+
+.card__desc {
+  font-size: 0.86rem;
+  color: var(--color-muted);
+  line-height: 1.45;
+  max-width: 100%;
+}
+
+.card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-blue);
+  letter-spacing: 0.04em;
+}
+
+/* ── About ───────────────────────────────────────────────── */
+.about {
+  padding-top: calc(clamp(4rem, 8vw, 7rem) * 0.9);
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+  border-top: 1px solid var(--color-border);
+}
+
+.about__grid {
+  display: grid;
+  gap: 3rem 4rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about__text p {
+  font-size: 1.05rem;
+  color: var(--color-muted);
+  line-height: 1.75;
+}
+
+.about__pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pillar {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 0.75rem;
+  row-gap: 0.2rem;
+}
+
+.pillar__icon {
+  grid-row: 1 / 3;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 0.1rem;
+}
+
+.pillar strong {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.pillar span {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+.footer {
+  width: 100%;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+  padding-block: 3rem 2rem;
+}
+
+.footer__links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.footer__links a {
+  color: var(--color-muted);
+  transition: color 0.2s;
+}
+
+.footer__links a:hover {
+  color: var(--color-text);
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.footer__copy {
+  margin-left: 0.15rem;
+}
+
+.footer__brand :global(svg) {
+  height: 40px;
+  width: auto;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .nav__burger {
+    display: flex;
+  }
+
+  .nav__links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    background: rgba(0 0 0 / 0.97);
+    border-bottom: 1px solid var(--color-border);
+    padding: 0.5rem 0 1rem;
+    gap: 0;
+  }
+
+  .menu-open .nav__links {
+    display: flex;
+  }
+
+  .nav__links li {
+    display: block;
+    width: 100%;
+  }
+
+  .nav__links a {
+    display: block;
+    width: 100%;
+    padding: 0.85rem 1.5rem;
+    border: none !important;
+    background: none !important;
+    color: var(--color-muted);
+    box-sizing: border-box;
+  }
+
+  .nav__links a:hover {
+    color: var(--color-text);
+    background: rgba(255 255 255 / 0.04) !important;
+  }
+
+  .nav__links a.nav__cta {
+    display: block;
+    width: 100%;
+    padding: 0.85rem 1.5rem;
+    color: var(--color-text) !important;
+    border: none !important;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 640px) {
+
+  .intro {
+    padding-top: calc(clamp(4rem, 10vw, 8rem) * 0.7);
+  }
+
+  .work,
+  .about {
+    padding-top: calc(clamp(4rem, 8vw, 7rem) * 0.7);
+  }
+
+  .about__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    flex-direction: column;
+    width: 192px;
+    max-width: 100%;
+  }
+
+  .card__media {
+    width: 100%;
+    flex-basis: auto;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .card__body {
+    width: 100%;
+    max-width: 100%;
+    flex-basis: auto;
+    padding: 1rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
+</style>
