@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import PhenomWordmark from '../../branding/PhenomWordmark.svg?raw';
-import SeinARTSWordmark from '../../branding/SeinARTSWordmark.svg?raw';
+import PhenomWordmark from '../../branding/PhenomWordmark.svg?url';
+import SeinARTSWordmark from '../../branding/SeinARTSWordmark.svg?url';
 ---
 
 <Layout title="Phenom Studios" description="Phenom Studios — building RTS games and Unreal Engine tools built for competitive play.">
@@ -9,7 +9,7 @@ import SeinARTSWordmark from '../../branding/SeinARTSWordmark.svg?raw';
   <header class="nav-wrap">
     <nav class="nav container">
       <a href="#" class="nav__brand" aria-label="Phenom Studios home">
-        <Fragment set:html={PhenomWordmark} />
+        <img src={PhenomWordmark} alt="Phenom Studios" />
       </a>
       <button class="nav__burger" aria-label="Toggle menu" aria-expanded="false">
         <svg class="icon--menu" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -33,7 +33,7 @@ import SeinARTSWordmark from '../../branding/SeinARTSWordmark.svg?raw';
       <canvas class="hero__canvas" aria-hidden="true"></canvas>
       <div class="hero__content container">
         <div class="hero__logo">
-          <Fragment set:html={PhenomWordmark} />
+          <img src={PhenomWordmark} alt="Phenom Studios" />
         </div>
         <p class="hero__tagline">Real-time Strategy Experts</p>
         <a href="#intro" class="hero__scroll" aria-label="Scroll to work">
@@ -90,7 +90,7 @@ import SeinARTSWordmark from '../../branding/SeinARTSWordmark.svg?raw';
         <!-- SeinARTS card -->
         <a href="https://seinarts.gg" target="_blank" rel="noopener noreferrer" class="card card--featured">
           <div class="card__media">
-            <Fragment set:html={SeinARTSWordmark} />
+            <img src={SeinARTSWordmark} alt="SeinARTS" loading="lazy" />
           </div>
           <div class="card__body">
             <p class="card__desc">
@@ -169,7 +169,7 @@ import SeinARTSWordmark from '../../branding/SeinARTSWordmark.svg?raw';
         <li><a href="mailto:hello@phenomstudios.dev">Contact</a></li>
       </ul>      <div class="footer__inner">
         <a href="/" class="footer__brand" aria-label="Phenom Studios home">
-          <Fragment set:html={PhenomWordmark} />
+          <img src={PhenomWordmark} alt="Phenom Studios" loading="lazy" />
         </a>
         <span class="footer__copy">&copy; {new Date().getFullYear()}</span>
       </div>
@@ -341,7 +341,7 @@ import SeinARTSWordmark from '../../branding/SeinARTSWordmark.svg?raw';
   padding-block: 1rem;
 }
 
-.nav__brand :global(svg) {
+.nav__brand img {
   display: block;
   height: 40px;
   width: auto;
@@ -480,7 +480,7 @@ import SeinARTSWordmark from '../../branding/SeinARTSWordmark.svg?raw';
   gap: 1rem;
 }
 
-.hero__logo :global(svg) {
+.hero__logo img {
   width: clamp(315px, 65%, 680px);
   height: auto;
   display: block;
@@ -685,7 +685,7 @@ import SeinARTSWordmark from '../../branding/SeinARTSWordmark.svg?raw';
   padding: 0;
 }
 
-.card__media :global(svg) {
+.card__media img {
   width: 152px;
   height: auto;
   transform: translateY(-6px);
@@ -811,7 +811,8 @@ import SeinARTSWordmark from '../../branding/SeinARTSWordmark.svg?raw';
   margin-left: 0.15rem;
 }
 
-.footer__brand :global(svg) {
+.footer__brand img {
+  display: block;
   height: 40px;
   width: auto;
 }
